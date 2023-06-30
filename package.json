@@ -1,5 +1,5 @@
 {
-  "homepage": "https://coder-devp.github.io/TFM-Project/",
+  "homepage": "https://Coder-Devp.github.io/TFM_Project/",
   "name": "tfm",
   "version": "0.1.0",
   "private": true,
@@ -41,9 +41,11 @@
   },
   "browserslist": {
     "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
+      "chrome >= 67",
+      "edge >= 79",
+      "firefox >= 68",
+      "opera >= 54",
+      "safari >= 14"
     ],
     "development": [
       "last 1 chrome version",
