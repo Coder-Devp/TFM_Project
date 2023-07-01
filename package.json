@@ -12,6 +12,8 @@
     "@walletconnect/web3-provider": "^1.8.0",
     "@web3modal/ethereum": "^2.4.0",
     "@web3modal/react": "^2.4.5",
+    "browserslist": "^4.6.2",
+    "caniuse-lite": "^1.0.30000974",
     "ethers": "^5.6.1",
     "gh-pages": "^5.0.0",
     "react": "^18.2.0",
@@ -40,16 +42,8 @@
       "react-app/jest"
     ]
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "resolutions": {
+    "browserslist": "4.6.2",
+    "caniuse-lite": "1.0.30000974"
   }
 }
