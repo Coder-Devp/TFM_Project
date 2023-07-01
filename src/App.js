@@ -73,7 +73,7 @@ const publicClients = createPublicClient({
 
 const walletClient = createWalletClient({
   chain: bscTestnet,
-  transport: custom(window.ethereum)
+  transport: http()//custom(window.ethereum)
 })
 
 // JSON-RPC Account
@@ -168,8 +168,9 @@ function Login_Area(props) {
     }
   }
 
+  console.log(custom(window.ethereum))
   console.log('http : ');
-  console.log(http);
+  console.log(http());
   //console.log(bscTestnet);
   console.log('address is : ' + address);
   if (address !== undefined){
