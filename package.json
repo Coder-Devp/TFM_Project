@@ -50,14 +50,7 @@
       "edge >= 79",
       "firefox >= 68",
       "opera >= 54",
-      "safari >= 14",
-
-      "chrome android >= 67",
-      "firefox for android >= 68",
-      "Opera android >= 48",
-      "safari on iOS >= 17",
-      "samsung internet >= 9.0",
-      "webview android >= 67"
+      "safari >= 14"
     ],
     "development": [
       "last 1 chrome version",
