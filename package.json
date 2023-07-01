@@ -40,6 +40,10 @@
       "react-app/jest"
     ]
   },
+  "resolutions": {
+    "browserslist": "4.6.2",
+    "caniuse-lite": "1.0.30000974"
+  },
   "browserslist": {
     "production": [
       "chrome >= 67",
@@ -53,7 +57,7 @@
       "Opera android >= 48",
       "safari on iOS >= 17",
       "samsung internet >= 9.0",
-      "webView android >= 67"
+      "webview android >= 67"
     ],
     "development": [
       "last 1 chrome version",
