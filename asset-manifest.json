@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/TFM_Project/static/css/main.f855e6bc.css",
-    "main.js": "/TFM_Project/static/js/main.5ce7152c.js",
+    "main.js": "/TFM_Project/static/js/main.96f8d519.js",
     "static/js/180.c6dd43e9.chunk.js": "/TFM_Project/static/js/180.c6dd43e9.chunk.js",
     "static/js/473.907e4b8a.chunk.js": "/TFM_Project/static/js/473.907e4b8a.chunk.js",
     "static/js/883.8d3ca959.chunk.js": "/TFM_Project/static/js/883.8d3ca959.chunk.js",
@@ -15,7 +15,7 @@
     "static/js/290.3c559024.chunk.js": "/TFM_Project/static/js/290.3c559024.chunk.js",
     "index.html": "/TFM_Project/index.html",
     "main.f855e6bc.css.map": "/TFM_Project/static/css/main.f855e6bc.css.map",
-    "main.5ce7152c.js.map": "/TFM_Project/static/js/main.5ce7152c.js.map",
+    "main.96f8d519.js.map": "/TFM_Project/static/js/main.96f8d519.js.map",
     "180.c6dd43e9.chunk.js.map": "/TFM_Project/static/js/180.c6dd43e9.chunk.js.map",
     "473.907e4b8a.chunk.js.map": "/TFM_Project/static/js/473.907e4b8a.chunk.js.map",
     "997.bea564da.chunk.js.map": "/TFM_Project/static/js/997.bea564da.chunk.js.map",
@@ -29,6 +29,6 @@
   },
   "entrypoints": [
     "static/css/main.f855e6bc.css",
-    "static/js/main.5ce7152c.js"
+    "static/js/main.96f8d519.js"
   ]
 }
