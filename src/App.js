@@ -799,7 +799,7 @@ function App() {
 
   if (Render === false) {
     if (url === 'https://coder-devp.github.io/TFM_Project/'){//url === 'http://localhost:3000' || url === 'http://localhost:3000/') {
-      SetWrong_Link_Form(false);
+      //SetWrong_Link_Form(false);
       SetSignUp_Form(false);
     }
     else if ( url !=='https://coder-devp.github.io/TFM_Project/'){//url !== 'http://localhost:3000' || url !== 'http://localhost:3000/'){
@@ -808,13 +808,13 @@ function App() {
       if (Render === false){
         if (url_r[0] === 'https://coder-devp.github.io/TFM_Project/reffer?r='){//'http://localhost:3000/reffer?r='){        
           SetSignUp_Form(true);
-          SetWrong_Link_Form(false);
+          //SetWrong_Link_Form(false);
           SetRender(true);
         }
         else{
-          SetError_Text('Invalid URL');
-          SetWrong_Link_Form(true);
-          SetSignUp_Form(false);
+          //SetError_Text('Invalid URL');
+          //SetWrong_Link_Form(true);
+          //SetSignUp_Form(false);
           SetRender(true);
         }
       }
@@ -834,12 +834,8 @@ function App() {
           { 
             SignUp_Form === false && Wrong_Link_Form === false ? (
               <Login_Area color={color}/>
-            ) : SignUp_Form === true && Wrong_Link_Form === false ? (
+            ) : (// SignUp_Form === true && Wrong_Link_Form === false ? (
               <SignUp_Area color={color}/>
-            ) : (
-              <>
-                <div>Wrong URL</div>
-              </>
             )
           }
       </WagmiConfig>
