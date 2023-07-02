@@ -9,6 +9,7 @@ import { arbitrum, mainnet, polygon, bscTestnet } from 'wagmi/chains'
 import { createPublicClient, http, createWalletClient, custom } from 'viem'
 import { privateKeyToAccount } from 'viem/accounts'
 
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import { getContract } from 'viem';
 
@@ -798,19 +799,32 @@ function App() {
   let url = document.URL;
   console.log(url);
 
+  let url_path = '';
+
   if (Render === false) {
-    if (url === 'https://coder-devp.github.io/TFM_Project/'){//url === 'http://localhost:3000' || url === 'http://localhost:3000/') {
+    if (url === 'https://coder-devp.github.io/TFM_Project/'){ //|| url === 'http://localhost:3000' || url === 'http://localhost:3000/') {
       //SetWrong_Link_Form(false);
       SetSignUp_Form(false);
     }
-    else if ( url !=='https://coder-devp.github.io/TFM_Project/'){//url !== 'http://localhost:3000' || url !== 'http://localhost:3000/'){
+    else if ( url !== 'https://coder-devp.github.io/TFM_Project/'){// || url !== 'http://localhost:3000' || url !== 'http://localhost:3000/'){
       let url_r = url.split('0x');
       console.log(url_r[0]);
       if (Render === false){
-        if (url_r[0] === 'https://coder-devp.github.io/TFM_Project/reffer?r='){//'http://localhost:3000/reffer?r='){        
+        if (url_r[0] === 'https://coder-devp.github.io/TFM_Project/reffer?r=' || url_r[0] === 'http://localhost:3000/reffer?r='){        
           SetSignUp_Form(true);
           //SetWrong_Link_Form(false);
           SetRender(true);
+          //let url_to_ref = '';
+          /*if (url !== 'https://coder-devp.github.io/TFM_Project/'){
+            url_to_ref = url.split('00/');
+          }
+          */
+          //else if ('http://localhost:3000/reffer?r='){
+          let url_to_ref = url.split('io/');
+          //}
+          
+          console.log(url_to_ref[1]);
+          url_path = '/' + url_to_ref[1];  
         }
         else{
           //SetError_Text('Invalid URL');
@@ -833,12 +847,19 @@ function App() {
     <>
       <WagmiConfig config={wagmiConfig}>
           { 
-            SignUp_Form === false && Wrong_Link_Form === false ? (
+            /*SignUp_Form === false && Wrong_Link_Form === false ? (
               <Login_Area color={color}/>
             ) : (// SignUp_Form === true && Wrong_Link_Form === false ? (
               <SignUp_Area color={color}/>
-            )
+            )*/
+
           }
+          <BrowserRouter basename='/TFM_Project'>
+            <Routes>
+              <Route exact path='/TFM_Project' element={<Login_Area color={color}/>}></Route>
+              <Route path={url_path} element={<SignUp_Area color={color}/>}></Route>
+            </Routes>
+          </BrowserRouter>
       </WagmiConfig>
       
       <Web3Modal projectId={projectId} ethereumClient={ethereumClient} />

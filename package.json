@@ -21,6 +21,7 @@
     "react-native": "^0.72.1",
     "react-native-web": "^0.19.6",
     "react-query": "^3.39.3",
+    "react-router-dom": "^6.14.1",
     "react-scripts": "5.0.1",
     "viem": "^0.3.50",
     "wagmi": "^1.0.4",
