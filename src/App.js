@@ -854,10 +854,10 @@ function App() {
             )*/
 
           }
-          <BrowserRouter basename='/TFM_Project'>
+          <BrowserRouter basename='/TFM_Project/'>
             <Routes>
-              <Route exact path='/TFM_Project' element={<Login_Area color={color}/>}></Route>
-              <Route path={url_path} element={<SignUp_Area color={color}/>}></Route>
+              <Route exact path='/TFM_Project/' element={<Login_Area color={color}/>}></Route>
+              <Route path={(url_path + '/')} element={<SignUp_Area color={color}/>}></Route>
             </Routes>
           </BrowserRouter>
       </WagmiConfig>
