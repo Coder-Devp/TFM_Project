@@ -330,7 +330,7 @@ function Login_Area(props) {
             <div className="row">
                 <div className="container text-light" style={{backgroundColor: '#222f49'}} >
                     <div className="mx-2 my-2" style={{textAlign: 'center'}}>
-                        <h2><strong>Login</strong></h2>
+                        <h2><strong>Login Area!</strong></h2>
                     </div>
                     <div className="container mx-3 my-3">
                         <div className="row mx-2 my-2" style={{textAlign: 'center'}}>
