@@ -825,6 +825,7 @@ function App() {
           
           console.log(url_to_ref[1]);
           url_path = '/' + url_to_ref[1];  
+          console.log(url_path);
         }
         else{
           //SetError_Text('Invalid URL');
