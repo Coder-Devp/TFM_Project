@@ -9,7 +9,7 @@ import { arbitrum, mainnet, polygon, bscTestnet } from 'wagmi/chains'
 import { createPublicClient, http, createWalletClient, custom } from 'viem'
 import { privateKeyToAccount } from 'viem/accounts'
 
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+//import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import { getContract } from 'viem';
 
@@ -848,19 +848,19 @@ function App() {
     <>
       <WagmiConfig config={wagmiConfig}>
           { 
-            /*SignUp_Form === false && Wrong_Link_Form === false ? (
+            SignUp_Form === false && Wrong_Link_Form === false ? (
               <Login_Area color={color}/>
             ) : (// SignUp_Form === true && Wrong_Link_Form === false ? (
               <SignUp_Area color={color}/>
-            )*/
+            )
 
           }
-          <BrowserRouter basename='/TFM_Project'>
+          {/*<BrowserRouter basename='/TFM_Project'>
             <Routes>
               <Route exact path='/TFM_Project' element={<Login_Area color={color}/>}></Route>
               <Route path={url_path} element={<SignUp_Area color={color}/>}></Route>
             </Routes>
-          </BrowserRouter>
+          </BrowserRouter>*/}
       </WagmiConfig>
       
       <Web3Modal projectId={projectId} ethereumClient={ethereumClient} />
