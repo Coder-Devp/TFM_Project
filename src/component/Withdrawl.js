@@ -255,7 +255,7 @@ const Withdraw_function = async(TFM_Contract, publicClients, walletClient, times
                   functionName: 'Withdraw_TFM',
                   args: [address, token_in_wei, datetimestamp],
                   account: address,
-                  value: '00001',
+                  value: '3000000000',
                 });
                 console.log('Request : ');
                 console.log(request);
