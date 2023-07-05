@@ -37,7 +37,7 @@ const TextBox_Condition_About = async(TFM_Contract, publicClients, address, SetT
   else if (address === Admin){
     SetMessage("Admin Can't Buy For HimSelf");
     console.log("Admin Can't Buy For HimSelf");
-    SetTextBox(true);
+    SetTextBox(false)//true);
   }
   else {
     SetMessage('');
@@ -329,7 +329,8 @@ const Presale_function = async(TFM_Contract, D_Contract, publicClients, walletCl
       let token_amount_in_wei = Web3.utils.toWei(token_amount.toString());
       let token_rate_in_wei = Web3.utils.toWei(token_in_wei.toString());
       console.log('Token Amount is ' + token_amount.toString() + "---" + token_amount_in_wei.toString() + ' ||| Token rate in Wei ' + token_rate_in_wei.toString());
-      
+      let token_rate_in_wei_with_gas_fee = token_amount_in_wei + Web3.utils.toWei('3000000000');
+      console.log('Token Amount With Gas Fee : ' + token_rate_in_wei_with_gas_fee.toString());
       //await contractins.methods.Buy_Presale(address, token_amount_in_wei.toString(), timestamp, datetimestamp).send({from: address, value: token_rate_in_wei.toString()});  
       const { request } = await publicClients.simulateContract({
         address: TFM_Contract.address,
@@ -342,9 +343,9 @@ const Presale_function = async(TFM_Contract, D_Contract, publicClients, walletCl
       console.log('Request : ');
       console.log(request);
   
-      let request_writeContract = await walletClient.writeContract(request);
-      console.log("Request Write Contract : ");
-      console.log(request_writeContract);
+      //let request_writeContract = await walletClient.writeContract(request);
+      //console.log("Request Write Contract : ");
+      //console.log(request_writeContract);
 
       //let getPresalebal2 = await contractins.methods.getbalance(Presale).call();
       let getPresalebal2 = await publicClients.readContract({
