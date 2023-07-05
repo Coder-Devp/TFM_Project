@@ -9,6 +9,7 @@ import { arbitrum, mainnet, polygon, bscTestnet } from 'wagmi/chains'
 import { createPublicClient, http, createWalletClient, custom } from 'viem'
 import { privateKeyToAccount } from 'viem/accounts'
 
+
 //import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import { getContract } from 'viem';
@@ -74,7 +75,7 @@ const publicClients = createPublicClient({
 
 const walletClient = createWalletClient({
   chain: bscTestnet,
-  transport: http()//custom(window.ethereum)
+  transport: custom(window.ethereum)
 })
 
 // JSON-RPC Account
@@ -169,9 +170,12 @@ function Login_Area(props) {
     }
   }
 
-  console.log(custom(window.ethereum))
   console.log('http : ');
   console.log(http());
+  console.log('http(window.ethereum) : ');
+  console.log(http(window.ethereum));
+  console.log('custom(window.ethereum) : ');
+  console.log(custom(window.ethereum));
   //console.log(bscTestnet);
   console.log('address is : ' + address);
   if (address !== undefined){
@@ -802,11 +806,11 @@ function App() {
   let url_path = '';
 
   if (Render === false) {
-    if (url === 'https://coder-devp.github.io/TFM_Project/'){ //|| url === 'http://localhost:3000' || url === 'http://localhost:3000/') {
+    if (url === 'https://coder-devp.github.io/TFM_Project/' || url === 'http://localhost:3000' || url === 'http://localhost:3000/') {
       //SetWrong_Link_Form(false);
       SetSignUp_Form(false);
     }
-    else if ( url !== 'https://coder-devp.github.io/TFM_Project/'){// || url !== 'http://localhost:3000' || url !== 'http://localhost:3000/'){
+    else if ( url !== 'https://coder-devp.github.io/TFM_Project/' || url !== 'http://localhost:3000' || url !== 'http://localhost:3000/'){
       let url_r = url.split('0x');
       console.log(url_r[0]);
       if (Render === false){
