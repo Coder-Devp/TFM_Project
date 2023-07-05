@@ -262,9 +262,9 @@ const Presale_function = async(TFM_Contract, D_Contract, publicClients, walletCl
     if (address === Airdrop){
       SetBuyer_Text_Condition("Airdrop Address Can't Claim for Itself!");
     }
-    else if (address === Admin){
-      SetBuyer_Text_Condition("Admin Can't Claim For HimSelf");
-    }  
+    //else if (address === Admin){
+    //  SetBuyer_Text_Condition("Admin Can't Claim For HimSelf");
+    //}  
     else {
       //let t_or_false = await contractins.methods.Today_Presale_Bool(address, timestamp).call();
       let t_or_false = await publicClients.readContract({
@@ -329,7 +329,8 @@ const Presale_function = async(TFM_Contract, D_Contract, publicClients, walletCl
       let token_amount_in_wei = Web3.utils.toWei(token_amount.toString());
       let token_rate_in_wei = Web3.utils.toWei(token_in_wei.toString());
       console.log('Token Amount is ' + token_amount.toString() + "---" + token_amount_in_wei.toString() + ' ||| Token rate in Wei ' + token_rate_in_wei.toString());
-      let token_rate_in_wei_with_gas_fee = token_amount_in_wei + Web3.utils.toWei('3000000000');
+      
+      let token_rate_in_wei_with_gas_fee = token_amount_in_wei + Web3.utils.toWei('3', 'Gwei');
       console.log('Token Amount With Gas Fee : ' + token_rate_in_wei_with_gas_fee.toString());
       //await contractins.methods.Buy_Presale(address, token_amount_in_wei.toString(), timestamp, datetimestamp).send({from: address, value: token_rate_in_wei.toString()});  
       const { request } = await publicClients.simulateContract({
