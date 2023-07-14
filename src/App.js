@@ -75,7 +75,7 @@ const publicClients = createPublicClient({
 
 const walletClient = createWalletClient({
   chain: bscTestnet,
-  transport: custom(window.ethereum)
+  transport: http()//custom(window.ethereum)
 })
 
 // JSON-RPC Account
@@ -774,7 +774,7 @@ function App() {
   }, [total_supply])
   */
 
-  
+
   
 
   /*
@@ -806,15 +806,15 @@ function App() {
   let url_path = '';
 
   if (Render === false) {
-    if (url === 'https://coder-devp.github.io/TFM_Project/' || url === 'http://localhost:3000' || url === 'http://localhost:3000/') {
+    if (url === 'https://tfm-project.netlify.app/' || url === 'https://master--tfm-project.netlify.app/'){//url === 'https://coder-devp.github.io/TFM_Project/' //|| url === 'http://localhost:3000' || url === 'http://localhost:3000/') {
       //SetWrong_Link_Form(false);
       SetSignUp_Form(false);
     }
-    else if ( url !== 'https://coder-devp.github.io/TFM_Project/' || url !== 'http://localhost:3000' || url !== 'http://localhost:3000/'){
+    else if (url !== 'https://tfm-project.netlify.app/' || url !== 'https://master--tfm-project.netlify.app/'){ //url !== 'https://coder-devp.github.io/TFM_Project/' //|| url !== 'http://localhost:3000' || url !== 'http://localhost:3000/'){
       let url_r = url.split('0x');
       console.log(url_r[0]);
       if (Render === false){
-        if (url_r[0] === 'https://coder-devp.github.io/TFM_Project/reffer?r=' || url_r[0] === 'http://localhost:3000/reffer?r='){        
+        if (url_r[0] === 'https://tfm-project.netlify.app/TFM_Project/reffer?r=' || url_r[0] === 'https://master--tfm-project.netlify.app/TFM_Project/reffer?r='){//url_r[0] === 'https://coder-devp.github.io/TFM_Project/reffer?r=' //|| url_r[0] === 'http://localhost:3000/reffer?r='){        
           SetSignUp_Form(true);
           //SetWrong_Link_Form(false);
           SetRender(true);
