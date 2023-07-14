@@ -802,6 +802,8 @@ function App() {
   
   let url = document.URL;
   console.log(url);
+  let refurl = document.referrer;
+  console.log(refurl);
 
   let url_path = '';
 
